@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_margin="10dp"
+     app:cardElevation="2dp"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp">
+
+        <ImageView
+            android:id="@+id/flag"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_indonesia"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ContentDescription"
+            />
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:paddingStart="5dp"
+            android:text="@string/indonesia"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintBottom_toBottomOf="@+id/flag"
+            app:layout_constraintStart_toEndOf="@+id/flag"
+            app:layout_constraintTop_toTopOf="@+id/flag"
+            tools:ignore="RtlSymmetry,SmallSp" />
+
+        <TextView
+            android:id="@+id/confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_circle_confirm"
+            android:text="@string/confirm_count"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@+id/flag"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/cured"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_circle_cure"
+            android:text="@string/confirm_count"
+            android:textSize="16sp"
+            android:textAllCaps="true"
+            app:layout_constraintTop_toBottomOf="@+id/confirm"
+            tools:ignore="SmallSp" />
+
+        <TextView
+            android:id="@+id/death"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_circle_death"
+            android:text="@string/confirm_count"
+            android:textSize="16sp"
+            app:layout_constraintTop_toBottomOf="@+id/cured"
+            tools:ignore="SmallSp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.cardview.widget.CardView>

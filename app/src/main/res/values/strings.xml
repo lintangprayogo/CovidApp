@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">CovidApp</string>
+    <string name="live_stastic">Stastik Langsung</string>
+    <string name="title">Kematian dan kesembuhan\nKasus Covid-19 di seluruh dunia</string>
+    <string name="timestamp">Data Jumaat</string>
+    <string name="kasus_terkonfirmasi">Kasus terkonfirmasi</string>
+    <string name="confirm_count">15.000.000</string>
+    <string name="meninggal">meninggal</string>
+    <string name="lokasi_anda">Lokasi Anda</string>
+    <string name="indonesia">Indonesia</string>
+    <string name="stastik_indonesia">Stastik Indonesia</string>
+    <string name="top_global">Top Global</string>
+    <string name="sembuh">Sembuh</string>
+</resources>
