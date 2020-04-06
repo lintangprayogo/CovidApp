@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bumptech.glide.Glide
-import com.rplgdc.covidapp.R
 import com.rplgdc.covidapp.base.data.model.Country
 import com.rplgdc.covidapp.base.ui.BaseHolder
 import com.rplgdc.covidapp.base.ui.BaseRecylerViewAdapter
