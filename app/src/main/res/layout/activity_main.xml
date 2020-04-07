@@ -26,18 +26,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/title"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
-        android:text="@string/title"
-        android:textColor="@color/black"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/live_statistics"
-        app:layout_constraintWidth_percent="0.5" />
+
 
     <TextView
         android:id="@+id/timestamp"
@@ -50,7 +39,7 @@
         android:textColor="@color/black"
         android:textSize="14sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintTop_toBottomOf="@id/live_statistics" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/confirm_card_global"
@@ -66,7 +55,7 @@
             android:layout_height="match_parent"
             android:background="@color/orange"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="2dp">
 
             <TextView
                 android:id="@+id/confirm_global"
@@ -84,12 +73,11 @@
                 android:id="@+id/confirm_count_global"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
                 android:text="@string/confirm_count"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -108,7 +96,8 @@
             android:layout_height="wrap_content"
             android:background="@color/red"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="2dp"
+        >
 
             <TextView
                 android:id="@+id/death_global"
@@ -150,7 +139,7 @@
             android:layout_height="wrap_content"
             android:background="@color/blue"
             android:orientation="vertical"
-            android:padding="10dp">
+            android:padding="2dp">
 
             <TextView
                 android:id="@+id/cured_global"
@@ -226,7 +215,7 @@
                 app:layout_constraintBottom_toBottomOf="@+id/flag"
                 app:layout_constraintStart_toEndOf="@+id/flag"
                 app:layout_constraintTop_toTopOf="@+id/flag"
-                tools:ignore="SmallSp" />
+                tools:ignore="RtlSymmetry,SmallSp" />
 
             <TextView
                 android:id="@+id/confirm_your"
@@ -287,5 +276,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:visibility="gone"
-        app:constraint_referenced_ids="top,top_rv,confirm_card_global,cured_card_global,death_card,your_card,timestamp,live_statistics,your_location_title,title" />
+        app:constraint_referenced_ids="top,top_rv,confirm_card_global,cured_card_global,death_card,your_card,timestamp,live_statistics,your_location_title" />
 </androidx.constraintlayout.widget.ConstraintLayout>
