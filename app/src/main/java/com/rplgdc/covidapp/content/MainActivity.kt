@@ -16,26 +16,36 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 class MainActivity : BaseActivity() {
-private lateinit var sumaryViewModel:SumaryViewModel
-private lateinit var adapter: CountryAdapter
+    private lateinit var sumaryViewModel: SumaryViewModel
+    private lateinit var adapter: CountryAdapter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         sumaryViewModel = obtainViewModel<SumaryViewModel>()
-        adapter= CountryAdapter()
+        adapter = CountryAdapter()
+  getSummary()
+         retry.setOnClickListener {
+             getSummary()
+         }
+    }
+
+    private  fun getSummary(){
+        setupEventView(retry,false)
+        setupEventView(progress_bar,true)
         sumaryViewModel.getSumary().observe(this, Observer {
             if (it != null) {
                 setGlobal(it.global)
                 timestamp.text = setDate(it.date)
                 setCountry(it.countries)
                 setupEventView(progress_bar, false)
+                setupEventView(retry,false)
                 setupEventView(content, true)
-
-
+            }else {
+                 setupEventView(progress_bar,false)
+                  setupEventView(retry,true)
             }
-
-        })
-
+        }
+        )
     }
 
     private fun setCountry(list: List<Country>) {
@@ -53,11 +63,11 @@ private lateinit var adapter: CountryAdapter
             Glide.with(flag).load(imgUrl).into(flag)
         }
 
-        val order=list.sortedByDescending { it.totalConfirmed }
-        adapter.addData(order.subList(0,9))
-        adapter.setLayout(R.layout.location_layout,this)
-        top_rv.adapter=adapter
-        top_rv.layoutManager=LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        val order = list.sortedByDescending { it.totalConfirmed }
+        adapter.addData(order.subList(0, 9))
+        adapter.setLayout(R.layout.location_layout, this)
+        top_rv.adapter = adapter
+        top_rv.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
     }
 
