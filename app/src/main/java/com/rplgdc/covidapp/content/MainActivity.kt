@@ -79,7 +79,7 @@ private lateinit var adapter: CountryAdapter
         return try {
             val inputFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssX")
             val outputFormat = SimpleDateFormat("MMM dd yyyy HH:mm:ss")
-            val date: Date = inputFormat.parse("2020-04-06T15:53:52Z")
+            val date: Date = inputFormat.parse(dateInput)
             val formattedDate: String = outputFormat.format(date)
             formattedDate
         } catch (e: Exception) {
